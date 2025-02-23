@@ -6,7 +6,7 @@ class Book(models.Model):
     description = models.TextField()
     genre = models.CharField(max_length=50)
     publication_date = models.DateField()
-    cover_image = models.URLField(blank=True, null=True)
+    cover_image = models.ImageField(upload_to='booksimg/',null=True)
     rating = models.FloatField(default=0.0)
     isbn = models.CharField(max_length=13, blank=True)
     publisher = models.CharField(max_length=100, blank=True)
