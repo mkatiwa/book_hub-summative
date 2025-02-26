@@ -11,8 +11,8 @@ from django.urls import path, include
 from accounts.views import register
 
 urlpatterns = [
-    path('', admin.site.urls),
-    path('api/', include('bookhub.urls')),
+    path('admin', admin.site.urls),
+    path('', include('bookhub.urls')),
     # path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     # path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     # path('api/register/', register, name='register'),
